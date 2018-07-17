@@ -1,3 +1,10 @@
+<<<<<<< Updated upstream
+#PSD
+=======
+# Large sourcs
+>>>>>>> Stashed changes
+*.psd
+
 # Logs
 logs
 *.log

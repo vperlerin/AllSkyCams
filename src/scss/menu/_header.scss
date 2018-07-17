@@ -1,0 +1,47 @@
+// Header Components
+nav  { 
+	@media (max-width:767px) {
+		background-color:$header_bg;
+	}	
+} 
+
+
+.wbg, #header-bg {
+    background-size: auto auto;
+    background-position: 50% -175px;
+    background-repeat:no-repeat;
+}
+
+// For page titles
+.wbg {
+    background-position: 50% -305px;
+    box-shadow:inset 0 120px 180px rgba(10,63,103,.65), inset 0 5px 6px rgba(0,0,0,.6);
+
+    @media(max-width:767px) {
+        background-image: none!important; 
+        box-shadow:none;
+        color:$main-typo-color!important;
+        background-color:#fff;
+    }
+}
+
+#header-bg {  
+    width: 100%;
+    height:100%;
+    max-height:883px;
+
+    @media (max-width:767px) { 
+        background-image: none!important;
+        max-height: 0;
+    	overflow: hidden;
+    	min-height: 0;
+
+    }
+
+
+}
+
+// Animations on #main & menu
+nav, label[for=main_menu] {
+  @include transition(all .2s cubic-bezier(.23,1,.32,1)); 
+} 

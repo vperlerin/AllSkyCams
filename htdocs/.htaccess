@@ -1,0 +1,58 @@
+#AddType x-mapp-php4.php
+DirectoryIndex index.php
+ 
+ 
+AddDefaultCharset UTF-8 
+
+# Bootstrap Redirects
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# Protect hidden files from being viewed
+<Files .*>
+        Order Deny,Allow
+        Deny From All
+</Files>
+
+
+Options +FollowSymLinks
+RewriteEngine on 
+ 
+RewriteBase /
+  
+# FOR BANNED IPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On 
+    RewriteCond ${access:%{REMOTE_ADDR}} deny [NC]
+    RewriteRule ^ - [L,F]
+</IfModule>
+
+ 
+#PROTECT CONFIG
+<files config.php>
+    order allow,deny
+    deny from all
+</files>
+
+#PROTECT THIS FILE
+<files ~ "^.*\.([Hh][Tt][Aa])">
+    order allow,deny
+    deny from all
+    satisfy all
+</files>
+
+#DISABLE xmlrpc 
+<Files xmlrpc.php>
+    order deny,allow
+    deny from all
+</Files>
+
+  

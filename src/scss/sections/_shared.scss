@@ -1,0 +1,54 @@
+
+.w {
+	color:#fff;
+} 
+           
+.bg {
+	background-color:#f1f3f4;
+}  
+
+.bbl {
+	background-color:$header_bg;
+}
+ 
+.bbl-t {
+ 	color:#1b2f3f;
+}
+
+.bb {
+	background-color:#17181a; 
+}
+
+.bw {
+	background-color:#fff; 
+}
+ 
+.ins {
+	padding:2em;
+
+	@media (max-width:767px) {
+		padding:.5em;
+	}
+
+	@media (min-width:768px) {
+		&.nlp {	
+			padding-left:0;
+		}
+	}
+
+	&.npb {
+		@media (min-width:1400px) {
+			padding-left:0;
+			padding-right:0;
+		}
+	}
+}
+
+#main, section {
+	position:relative;
+
+	@media (max-width:1147px) {
+		padding-left:.5em;
+		padding-right:.5em;
+	}
+}

@@ -1,0 +1,48 @@
+
+<div id="main" class="display-m-b">
+    <div class="title"><div class="h1_like"><h1><span class="hidden-m">All Sky Cams</span> <span class="logo display-m-b"><img src="/img/allskycams_xs.svg" title="ALL SKY CAMS"></span></h1></div></div>
+</div>
+<section class="intro f bw" >
+    <div class="row">
+        <div class="ins npb">
+            <h1 class="hmt hmb">About AllSkyCams</h1>
+            
+        </div>
+    </div> 
+</section>
+<section class="bg" >
+        <div class="row">
+            <div class="ins npb npt pbt">
+                    <p class="h2_like">It's a long way to create the world’s first commercially available scientifically calibrated meteor camera systems.</p>
+            </div>
+        </div> 
+</section>
+<section class="bw">
+<div  class="row dmb">
+    <div class="ins npb npt mb">
+            <a href="/img/people/mikehankey.jpg" class="lb db fl">
+                <picture class="lozad" data-iesrc="/img/people/mikehankey.jpg" title="Mike Hankey - AllSkyCams fondator"> 
+                    <source srcset="/img/people/mikehankey.jpg">
+                    <noscript><img src="/img/people/mikehankey.jpg"></noscript>
+                </picture>
+            </a>
+ 
+        <p>I’m Mike Hankey, amateur astronomer and operations manager for the American Meteor Society. In 2009, a few days after taking my first high resolution photo of a bright fireball near my home, I had an idea for a camera system that would be specifically designed for photographing fireball meteors and subsequently figuring out where those meteors occurred and if and where they left meteorites on the ground. Once I started researching I found out, I wasn’t the first person with this idea. Numerous scientific networks around the world were designed for this exact purpose. As I learned about the networks and the hardware and software that powered them I became overwhelmed. Over the years, I bought several off the shelf all sky cameras, but none of them worked the functionality I wanted. I attempted several times to build my own and failed.</p>
+        <p>I stuck with it, revisiting the project every couple of years and as I continued to learn and experiment I got involved with a group of meteor workers through the International Meteor Organization. At their annual conferences I learned about all the different cameras and custom software that had been built by meteor physicists and paid for by governments and universities over the years. As I was learning more about meteor physics and the professional astronomical devices designed for meteor work, technology, specifically computer and camera technology, continued progressing at an unprecedented rate. A new barebones incredibly cheap linux computer called a Raspberry PI was created. This would be the foundation for my new fireball camera system.</p>
+        <p>With the help of some engineers in my company, we developed our first hardware prototype and proof of concept in 2013-2014. This was a single camera raspberry pi combo that used an easy cap card to capture video from an analog Watec 902H camera with a fish eye lens. The hardware worked and the concept worked, but we had a few issues with it. Primarily we didn’t have any software to run on it. I shelved the idea for a couple of more years and came back to it in the summer of 2016.</p>
+        <p>When I came back to it this time, technology had improved significantly. We were now on the 3rd generation raspberry pi with 1 gig of memory and a 1 gigahertz 4 core CPU. The open source computer vision software had also matured greatly since the last time I looked at it. Over the next three months, I developed the core video processing software using OpenCV and Python. I required that the video stream capture at 25 FPS and also utilize a camera that was sensitive enough to capture background stars that could be used for calibrating the camera’s field of view. Once I had the basic software finished, i tested dozens of cameras until I found the Sony Starvis IMX290 IP cameras, that thankfully met all of my requirements and then some.</p>
+        <p>With the first device, it was my intention to make it easy for amateurs to use and eliminate the traditional barriers associated with running a sky camera — all of the things I experience while trying in my early days. These complicating factors included:</p>
+        <ul>
+        <li>the need to run power and ethernet outside the home (requires drilling a hole through a wall in your house)</li>
+        <li>the need for a perfect view in all directions (requires roof mounting or at least mounting in a high place)</li>
+        <li>the need to have a dedicated PC running the capture and detection software, and having the camera video wire connected to that computer.</li>
+        <li>the high cost of hardware and software</li>
+        </ul>
+        <p>As I developed prototype cameras, I placed them in the windows of my barn, which usually had the lights out. I found that the cameras worked great from inside peaking through the window glass and the only problem came when lights were turn on and reflected against the window glass. Then I thought, why not put the camera in a box and hang it in your window. The box would block the inside light and allow the camera to see outside without reflections. Having the camera inside instead of outside, eliminated 1/2 of the complications new users have when getting started with sky cameras. The indoor part sky camera was born.</p>
+        <p>Once I had the first model, close to perfected, I sent out a few prototypes to meteor friends for testing. They all loved the concept, but had one complaint. They all told me essentially, “Look, this indoor part sky camera is great, but I want an All Sky Camera!”. Of course, my first customers were either professionals are really hardcore amateurs, so what should I have expected?</p>
+        <p>I put the part sky camera on hold and started on an all sky version of it. All I needed to do was put 6 of these into one container, right? It was a little more complicated than that, but over a few months, I came up with a working design that would place all of the cameras in one housing and the raspberry pis in a different housing. The Raspberry PI box would sit inside the home and the camera module would be mounted outside.</p>
+        <p>As I was working out complications with the camera module, specifically developing a system to keep it cool during the day, my long time partner in the AMS website, Vincent Perlerin developed a browser based user interface for the device. The UI runs on a phone, tablet or PC and allows the user to control all aspects of the device.</p>
+        <p>With the initial software and hardware ready for release, we created the first 4 All Sky units and shipped them out. One stayed with me in Baltimore Maryland. The others went to Prescott Arizona, Brigham Michigan and&nbsp;Fredonia, Kansas. These 4 stations would be the beginning of the AMS’s first All Sky Network. The goal of which is to cover the skies over the entire United States with 2 or more cameras.</p>
+    </div>
+</div>
+</section>

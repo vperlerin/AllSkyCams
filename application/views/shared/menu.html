@@ -1,0 +1,39 @@
+<input type="checkbox" id="main_menu" name="main_menu" class="no_js" />
+            
+          
+<label for="main_menu">
+    <div class="hamburger hamburger--elastic" type="button" aria-label="Menu" aria-controls="main_menu">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </div> 
+</label>
+
+<nav class="lozad" data-background-image="/img/bg/meteor1.jpg">
+    <ul>
+        <li class="hidden-m">
+            <a href="/" class="logo-switcher <? if(!empty($activeMenu) && $activeMenu=='home'):?>act<?endif;?>">
+                <i></i>
+                <span class="home">Welcome</span>
+            </a>
+        </li>
+        <li class="display-m-b">
+             <a href="/" class="m_logo"><img src="/img/allskycams_xs.svg" title="ALL SKY CAMS"/></a>
+        </li>
+        <li>
+            <a href="products" <? if(!empty($activeMenu) && $activeMenu=='products'):?>class="act"<?endif;?> ><span>Products</span></a>
+        </li>
+        <li>
+            <a href="buynow" <? if(!empty($activeMenu) && $activeMenu=='buynow'):?>class="act"<?endif;?>><span>Buy Now</span></a>
+        </li>
+        <li>
+            <a href="network" <? if(!empty($activeMenu) && $activeMenu=='network'):?>class="act"<?endif;?>><span>Network</span></a>
+        </li>
+        <li>
+            <a href="support" <? if(!empty($activeMenu) && $activeMenu=='support'):?>class="act"<?endif;?>><span>Support</span></a>
+        </li>
+        <li>
+            <a href="about" <? if(!empty($activeMenu) && $activeMenu=='about'):?>class="act"<?endif;?>><span>About</span></a>
+        </li>
+    </ul>
+</nav>

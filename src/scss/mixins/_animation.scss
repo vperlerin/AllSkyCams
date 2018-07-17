@@ -1,0 +1,99 @@
+// See animate-sass npm module
+/*
+$base-duration: .5s; // Override
+$use-fadeIn: true;
+$use-slideInLeft: true;
+
+@import "../../node_modules/animate-sass/animate";
+*/
+
+.animated {
+    -webkit-animation-duration: calc(.5s);
+    animation-duration: calc(.5s);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+
+    &.wtcv {
+        animation-delay:.4s;
+        -webkit-animation-delay:.4s;
+        animation-timing-function: cubic-bezier(.17,.67,.32,1.12);
+        -webkit-animation-timing-function: cubic-bezier(.17,.67,.32,1.12);
+        -webkit-animation-duration: calc(1.8s);
+        animation-duration: calc(1.8s);
+    }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    @include transform(translate3d(0, 100%, 0));
+  }
+
+  to {
+    opacity: 1;
+    @include transform(translate3d(0, 0, 0));
+  }
+}
+ 
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+
+    &.wtcv {
+        animation-delay:.8s;
+        -webkit-animation-delay:.8s;
+        animation-timing-function: cubic-bezier(.17,.67,.32,1.12);
+        -webkit-animation-timing-function: cubic-bezier(.17,.67,.32,1.12);
+        -webkit-animation-duration: calc(1.8s);
+        animation-duration: calc(1.8s);
+    }
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    @include transform(translate3d(0, -50px, 0));
+  }  
+
+  to {
+    opacity: 1;
+    @include transform(translate3d(0, 0, 0));
+  }
+
+  
+}
+
+ 
+
+.slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+
+     &.wtcv-in {
+        animation-delay:.5s;
+        -webkit-animation-delay:.5s;
+        animation-timing-function: cubic-bezier(.17,.67,.33,1);
+        -webkit-animation-timing-function: cubic-bezier(.17,.67,.33,1);
+        -webkit-animation-duration: calc(1.8s);
+        animation-duration: calc(1.8s);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        @include transform(translate3d(-100%, 0, 0)); 
+        visibility: visible;
+    }
+    100% {
+        @include transform(translate3d(0, 0, 0)); 
+    }
+}

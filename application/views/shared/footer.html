@@ -1,0 +1,16 @@
+<footer id="footer">
+	<div class="tc">
+		AllSkyCams &copy; <?= date('Y'); ?>
+	</div>
+</footer>
+<script src="/js/allskycams.min.js" async></script> 
+<!-- // Load IntersectionObserver polyfill if IntersectionObserver isn't supported -->
+<script type="text/javascript">if (!('IntersectionObserver' in window)) { var script = document.createElement("script"); script.src = "/js/pollyfills.min.js";document.getElementsByTagName('head')[0].appendChild(script);}</script>
+<script src="/js/lozad.min.js"></script> 
+<!-- //ES6 const observer = lozad(); observer.observe(); -->
+<script>
+'use strict'; 
+var observer = lozad();observer.observe();
+</script>
+</body>
+</html>

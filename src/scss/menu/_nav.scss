@@ -1,0 +1,55 @@
+nav {
+
+	ul { 
+	    height:100%;
+	    padding:0 0 0 .5em;
+	    margin:0 auto;
+	    list-style:none;
+	    max-width:$nav-max-width;
+	    display: table;
+		width: 100%;
+ 
+	    @media (max-width:767px) {
+	    		display:block;
+				width:$menu-width;
+				padding:0;
+
+		}
+	}
+
+  
+	li {
+		margin:0;
+		display:table-cell;
+ 		
+		@media (max-width:767px) {
+		display:block;
+
+		// Delayed Animation for Mobile view
+		    $delay:0.05;
+		    $step:0.08;
+		    @for $i from 1 through 10
+		     {
+		       &:nth-child(#{$i}) {
+		        a {
+		          $delay: ($step + $delay);
+		          @include transition-delay(#{$delay}s);
+		        }
+		      }
+		     } 
+	    }
+
+		a {
+			text-transform: uppercase;
+			//letter-spacing: .1em;
+			color:$logo_color;
+			position:relative; 
+            display: block; 
+            outline: none;
+            text-decoration:none;
+            
+		}
+	}
+
+	
+}

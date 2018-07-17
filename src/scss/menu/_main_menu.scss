@@ -1,0 +1,150 @@
+
+// Mobile Menu
+nav {
+    position:fixed;
+    top:0;
+    width:$menu-width;
+    height:100%;
+    margin:0;
+    z-index: 1; 
+    @include transition(height .6s 0s linear, right height .6s 0s cubic-bezier(.23,1,.32,1));
+}
+
+// Desktop
+@media(min-width:768px) {
+
+	header span.logo {
+		display:none;
+	} 
+
+ 	nav { 
+    z-index: 3;
+		box-shadow:none;
+		position:relative;
+		margin:0;
+		width:auto;
+		padding:0;
+	  position: fixed;
+    top: 0;
+    left: 0;
+    height: $header-height-desktop;
+    transform: none;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    
+    overflow: hidden; 
+    background-position: 50% -175px;
+    background-size: auto auto;
+    background-repeat:no-repeat; 
+    
+
+    @media (min-width:1920px) {
+      background-color: #000;
+    }
+
+    &.shrinked {
+      height: $header-height-shrinked;
+      box-shadow:$mobile-nav-shadow;
+  
+
+      ul li .logo-switcher  {
+
+        @media (min-width:767px) and (max-width:1024px) {
+         // For Ipad
+         display: block;
+          min-width: 190px;
+        }
+    
+        i {
+          opacity:1;
+        }
+      }
+    }
+
+		ul {
+			width:auto;
+			height:auto;
+			
+			li { 
+        position:relative; // For sub menu
+        vertical-align: middle;
+ 
+        .logo-switcher {
+
+          span, i {
+            opacity: 1;
+            @include transition(opacity .8s 0s cubic-bezier(.23,1,.32,1));
+          } 
+
+          i {
+            opacity: 0;
+          }
+
+        }
+
+				a {
+					left:inherit;
+					border-bottom:none medium;
+					padding:$menu-item-top-padding $menu-item-right-padding $menu-item-bottom-padding $menu-item-left-padding;
+          white-space: nowrap;
+          display:block;
+          margin:0 auto; 
+
+          span {
+                padding: .9em .275em;
+                @include transition(all .2s 0s);
+          }
+
+          &:hover, &:active, &.act {
+            span { 
+               border-top: 2px solid $second-color;
+             }
+          }
+				}
+			}
+		}
+
+	}
+
+	label[for=main_menu] {
+		display:none;
+	}
+
+}
+
+
+
+
+
+
+// Open/ Close Menu
+input[name="main_menu"]:checked ~ nav{
+    margin:0;
+}
+ 
+input[name="main_menu"]:checked ~ label{ 
+    .hamburger {
+      .hamburger-inner {
+        $y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
+
+        @include transform(translate3d(0, $y-offset, 0)rotate(135deg) );
+        transition-delay: 0.075s;
+
+        &::before {
+          transition-delay: 0s;
+          opacity: 0;
+        }
+
+        &::after {
+          transform: translate3d(0, $y-offset * -2, 0) rotate(-270deg);
+          transition-delay: 0.075s;
+        }
+      }
+    } 
+}
+
+
+input[name="main_menu"]:checked ~ section{
+  @include transform(translate3d($menu-width, 0, 0));
+}

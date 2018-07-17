@@ -1,0 +1,21 @@
+// Inside Homepage Illustration
+#welcome {
+    top: 14rem;
+    position: relative;
+
+
+	// Logo inside pages
+	.logo_in {
+		width: 60%;
+	    width: 60vw;
+	    height: auto;
+
+	    @media(max-width:1350px) {
+	      width:90%; 
+	      width: 90vw;
+	    }
+	}
+
+	
+
+}

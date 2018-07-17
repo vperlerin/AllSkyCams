@@ -1,0 +1,55 @@
+// Hamburger
+label[for=main_menu] {
+    display:block;
+    font-weight:700; 
+    text-align:center;
+    position:fixed; 
+    z-index:500; 
+    top:$burger_top;
+    right: .5em;
+
+    @media (min-width:768px) {
+        display:none;
+    }
+} 
+
+
+/** Mobile Menu */
+input[name="main_menu"]:checked ~ nav{
+    margin:0;
+
+    li {
+    	&:nth-child(2) {
+    		border-top: 1px solid $mobile-menu-separator-color;
+    	}
+
+    	a { 
+		    color: #fff;
+		    padding: .9em;
+		    border-bottom: 1px solid $mobile-menu-separator-color;
+    	}
+    }
+}
+ 
+/** Burger Animation */
+input[name="main_menu"]:checked ~ label{ 
+
+    .hamburger {
+      .hamburger-inner {
+        $y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
+        @include transform(translate3d(0, $y-offset, 0) rotate(135deg));
+        @include transition-delay(0.075s);
+
+        &::before {
+          	@include transition-delay(0s);
+          	opacity: 0;
+        }
+
+        &::after {
+        	@include transform(translate3d(0, $y-offset * -2, 0) rotate(-270deg));
+        	@include transition-delay(0.075s);
+        }
+      }
+    }
+
+}

@@ -1,0 +1,45 @@
+@media (max-width:767px) {
+ #main {
+
+    margin-top: -1em;
+    padding: 0;
+    
+    p {
+    	margin:0;
+    	padding:1em;
+    }
+
+ 	.title {
+	    background-image: url(../img/bg/meteor1-sm.jpg);
+	    background-size: 100% 100%;
+	    background-position: 0 0;
+	    background-repeat: no-repeat;
+	    color: #fff; 
+
+	    p {
+		    margin: 0;
+		    padding: 0 1em 1.5em;
+		    color: #f0f0f0;
+		    font-size: .95rem;
+		    line-height: 1.3rem;
+	    }
+    }
+
+    .box-icons {
+    	max-width: 20rem;
+	}
+
+	h2 {
+		color: #ffb000;
+	}
+ }
+ 
+
+}
+
+
+@media(min-width:1200px) {
+	#main	.box-icons {
+			max-width: 1000px;
+		}
+	}

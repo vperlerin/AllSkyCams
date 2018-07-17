@@ -1,0 +1,36 @@
+#goals {
+	h2 {
+		margin: 1rem 0;
+	}  
+ 
+	@media (max-width:960px) {
+		.col70 { 
+			width:60%;
+		}   
+		.col30 { 
+			width:40%;
+		}
+	}
+	@media (max-width:840px) {
+		.col70 {
+			width:55%;
+		}
+		.col30 {
+			width:45%;
+		}
+	}
+	@media (max-width: 767px) {
+		padding:.5em;
+		.col70, .col30 {
+			width:100%;
+			img, .msg {
+				max-width: 325px;
+    		}
+    		img {
+    			margin: 0 auto;
+			}
+		}
+
+	}
+	 
+}

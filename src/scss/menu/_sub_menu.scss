@@ -1,0 +1,32 @@
+// Submenu
+nav ul ul {
+
+  // These are the key CSS properties to create the effect
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0.1;
+  transition: transform 0.1s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+  transform: translateY(-10px) scaleY(0.5);
+  transform-origin: top;
+  
+  // Typical sub-menu styling
+  box-shadow: 5px 5px 5px rgba(black, 0.3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0; 
+  width: 10em; 
+
+  li {
+	display:block;
+  }
+}
+  
+
+// Sub-menu styles when shown
+nav ul > li:hover > ul {
+  clip: auto;
+  opacity: 1;
+  transform: translateY(0) scaleY(1);
+}

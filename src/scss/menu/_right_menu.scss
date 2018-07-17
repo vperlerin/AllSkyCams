@@ -1,0 +1,54 @@
+// MENU ON THE RIGHT
+.right_menu {
+
+	li a { 
+    	padding: .9em;
+    	text-align: center;
+	}
+
+	input[name="main_menu"]:checked ~ section{
+	  @include transform(translate3d(-$menu-width, 0, 0));
+	} 
+ 
+ 	input[name="main_menu"]  ~ label[for=main_menu] { 
+		right:$burger_dist_from_border;
+	}  
+
+	@media(max-width:767px) {
+		nav li a {
+			text-align:right; 
+			right:-100%;         
+			@include transition(right 0.2s cubic-bezier(0.23, 1, 0.32, 1));
+
+			&:hover {
+				 background-color:$main-trans-color-hover;
+			}
+		} 
+		
+		nav {
+	    	right:0; 
+	    	margin-right:-$menu-width - .8em; // .8em for the shadow
+	    	overflow:hidden; // For the animation of the logo
+	    	box-shadow: $mobile-nav-shadow;
+	    	background-image: none!important;
+ 		}
+  
+		input[name="main_menu"]:checked ~ nav{
+		    li a { 
+				right: 0;
+				text-align: right;
+				padding-right: $menu-item-right-padding + $hamburger-layer-width + $hamburger-padding-x*3;
+		    
+				&.m_logo {
+					padding-right:1em;
+				}
+		    }
+
+ 	    }
+
+	    
+	}
+
+
+	
+}

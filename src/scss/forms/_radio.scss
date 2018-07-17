@@ -1,0 +1,46 @@
+label.radio {
+    cursor: pointer;
+    display: block;
+    
+    input[type=radio] {
+        position:absolute;
+        top: -9999px;
+        left: -9999px;
+        visibility: hidden; 
+    } 
+     
+    .r-ins { 
+        margin:0 1rem 1rem 0;
+    
+        @media (max-width:768px) {
+            margin: 0 0 1rem;
+        }
+    } 
+    
+     
+}  
+ 
+
+label.radio > input + .r-ins {
+    background-color:#246aa0;
+    color:#eee;
+    box-shadow:  0 7px 14px rgba(0,0,0,0.25),   0 5px 5px rgba(0,0,0,0.22); 
+    border-radius: 8px;
+    @include transition(all .6s 0s cubic-bezier(.23,1,.32,1)); 
+   
+}
+
+
+
+label.radio:hover > input + .r-ins {
+    color:#ccc;
+    background-color: $header_bg; 
+    box-shadow:  0 3px 7px rgba(0,0,0,0.25),   0 3px 3px rgba(0,0,0,0.22); 
+}
+
+
+label.radio > input:checked + .r-ins, label.radio:hover > input:checked + .r-ins {
+    background-color: $header_bg; 
+    color:#fff; 
+    box-shadow: inset  0 14px 28px rgba(0,0,0,0.25),  inset  0 10px 10px rgba(0,0,0,0.22); 
+}     

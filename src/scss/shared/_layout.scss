@@ -1,0 +1,280 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html{ 
+    height:100%;
+    background-color:#111;
+}
+
+body{
+    padding:0;
+    margin:0;
+} 
+
+.wrapper{
+    height:100%;
+}   
+ 
+input.no_js {
+	display:none;
+}  
+
+// Clearfix
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// Fixed header on desktop
+.f {
+    @media(min-width:768px) {
+        margin-top:$header-height-desktop;
+    }
+}
+
+
+.tc {
+	text-align:center;
+	margin:0 auto;
+}
+
+.db {
+	display:block;
+}
+
+.dib {
+	display:inline-block;
+}
+
+// Paddings
+
+.dpt { padding-top:1rem; }
+.dpb { padding-bottom:1rem; }
+@media (min-width:768px) {
+	.dpt { padding-top:4rem; }
+	.dpb { padding-bottom:4rem; }
+}
+
+
+.pt {
+    @media (min-width:768px) {
+        padding-top:2rem !important;
+    }
+    padding-top:1rem !important;
+}
+.pb {
+    padding-bottom:2rem;
+}
+
+.hpb {
+    padding-bottom:1rem;
+}
+ 
+.pr { 
+	padding-right:2rem;
+}
+
+.pl {
+	padding-left:2rem;
+}
+
+.npb {
+    padding-bottom:0 !important;
+}
+
+.npt {
+    padding-top:0 !important;
+}
+
+
+.w-brdt {
+    border-top: 4px solid $main-trans-color-hover;
+}
+
+// Margins
+.mt {
+    @media (min-width:768px) {
+        margin-top:2rem !important;
+    }
+ 	margin-top:1rem !important;
+}
+
+.hmt {
+    @media (min-width:768px) {
+        margin-top:1rem !important;
+    }
+
+    margin-top:.5rem !important;
+}
+
+.mb {
+    @media (min-width:768px) {
+        margin-bottom:2rem !important;
+    }
+ 	margin-bottom:1rem !important;
+}
+  
+
+.mr { 
+	margin-right:2rem;
+}
+
+.ml {
+	margin-left:2rem;
+}
+
+ 
+.hmb {
+    margin-bottom:1rem !important;
+}
+
+.nmt {
+    margin-top:0 !important;
+}
+
+.nmb {
+    margin-bottom:0 !important;
+}
+
+
+// Columns
+.row, .ins {
+  	max-width: $max-width;
+	margin:0 auto;
+
+	&:before, &:after {
+	    display: table;
+    	content: " ";
+	}
+
+    &:after {
+        clear: both;
+    }
+
+	.col {
+		position: relative;
+	    min-height: 1px; 
+	}
+}
+ 
+
+@media (min-width: 768px) {
+	.col {
+		float:left;
+	}
+	.col70 {
+		width:70%;
+	}
+	.col30 {
+		width:30%;
+	}
+	.col40 {
+    	width:40%;
+	}
+	.col60 {
+    	width:60%;
+	}
+	.col50 {
+    	width:50%;
+    }
+    .col33 {
+    	width:33.33333333%;
+	}
+	.col25 {
+    	width:25%;
+	}
+	.col20 {
+    	width:20%;
+	}
+}
+
+@media (max-width:990px) {
+    &.m990 .col {
+        float:none;
+        width:100% !important;
+    }
+}
+
+
+ 
+.row-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center; 
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+
+    @media (max-width:1140px) {
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; 
+        -webkit-box-pack: start;
+        -moz-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start; 
+    }
+}
+
+
+/*
+    Legacy Firefox implementation treats all flex containers
+    as inline-block elements.
+*/
+@-moz-document url-prefix() {
+.row-flex {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    }
+}
+
+
+// Floating Images
+.fl {
+    float: left;
+    max-width: 300px;
+    margin: 1rem 1rem 0 0;
+    padding: .5rem;
+    border: 1px solid #ccc;
+
+    @media(max-width:767px) { 
+        
+            max-width: 40%;
+        
+    }
+
+    @media(max-width:400px) { 
+        float:none;
+        max-width: 100%;
+    
+}
+}
