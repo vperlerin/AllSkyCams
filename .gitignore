@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-#PSD
-=======
 # Large sourcs
->>>>>>> Stashed changes
 *.psd
 
 # Logs
@@ -68,5 +64,5 @@ typings/
 .next
 
 # Config files
-applications/conf/vm
+application/conf/vm
 application/conf/production
