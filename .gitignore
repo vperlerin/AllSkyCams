@@ -64,5 +64,5 @@ typings/
 .next
 
 # Config files
-application/conf/vm
+application/conf/vm 
 application/conf/production
