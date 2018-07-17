@@ -41,7 +41,7 @@ class buynow_controller extends Template_Controller {
 			$this->input['res'] = Mail::send_contact_email(
 				$this->input['email'],
 				$this->input['firstname'] . ' ' . $this->input['lastname'],
-				'AllSkyCams BUY - ' . $this->input['subject'],
+				'AllSkyCams BUY',
 				$message 
 			);
 			unset($message);
