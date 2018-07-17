@@ -11,11 +11,17 @@
         </div> 
     </section>
     <section class="bg" >
-             
-    <div  class="row dmb">
+
+      <div  class="row dmb">
+
+                     
+    <? if(!empty($input['res'])): ?>
+       <div class="alert mt">Your message has been sent. We will get back to you very soon.</div>
+    <? endif; ?>  
         <div class="box">
         <div class="ins npb npt mb mt">
-            <form>
+            <form method="POST">
+                <input type="hidden" name="submit" value="1"/>
                 <fieldset>
                     <div class="row">
                         <p class="h2_like">Please, fill all the fields below.</p>
@@ -63,7 +69,7 @@
                             <div class="col-75">
                                     <p><button type="submit" class="btn btn-big wtcv dib tc">Submit</button></p>
                             </div>
-                </div>
+                    </div>
                 </fieldset>
                 
             </form>
