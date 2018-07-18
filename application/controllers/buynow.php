@@ -20,16 +20,16 @@ class buynow_controller extends Template_Controller {
 
 			switch ($this->input['kits']) {
 				case 'kit6-1':
-					$message .= "<strong>A fully assembled AllSky6 kit ($1,899)</strong>";
+					$message .= "<strong>A fully assembled AllSky6 kit ($1,200)</strong>";
 					break;
 				case 'kit6-2':
-					$message .= "<strong>A fully assembled AllSky6 kit WITHOUT computer ($1,599)</strong>";
+					$message .= "<strong>A fully assembled AllSky6 kit WITHOUT computer ($900)</strong>";
 					break;
 				case 'kit6-3':
-					$message .= "<strong>A DIY AllSky6 kit ($1,199)</strong>";
+					$message .= "<strong>A DIY AllSky6 kit ($1,000)</strong>";
 					break;
 				case 'kit6-4':
-					$message .= "<strong>A DIY AllSky6 kit WITHOUT computer ($899)</strong>";
+					$message .= "<strong>A DIY AllSky6 kit WITHOUT computer ($700)</strong>";
 					break;
 			}
 
