@@ -1,7 +1,7 @@
 <? 
 
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
-ini_set('display_errors', 'on'); 
+//error_reporting(E_ERROR | E_WARNING | E_PARSE);
+//ini_set('display_errors', 'on'); 
 
 if(!defined('STARTUP_ONLY')) {
     session_start(); 
