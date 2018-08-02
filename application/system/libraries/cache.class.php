@@ -5,30 +5,18 @@ class Cache {
     private $conn;
 
     private static function conn() {
-        
-        if (class_exists('Memcache')) {
-            $conn = new Memcache();
-        } else {
-            $conn = new Memcached();
-        }
-        
+        $conn = new Memcached();
         $conn->addServer(MEMCACHE_ADDR, MEMCACHE_PORT); 
         return $conn;
     }
-
-   // $expire used to default to 3600 (one hour)
-   // 14400 = > 4 hours
-   // before it defaulted to 30 days  (2592000)
-    public static function add($key, $val, $flag = false, $expire = 14400) {
-        
  
+    public static function add($key, $val, $flag = false, $expire = 14400) {
         $conn = self::conn();
         
         if (!empty($key)) {
-            if (!$conn->replace($key, $val,false,$expire)) {
-                return $conn->set($key, $val,false,$expire);
+            if (!$conn->replace($key, $val, $expire)) {
+                return $conn->set($key, $val, $expire);
             }
-         
             return true;
         } 
 
@@ -39,7 +27,7 @@ class Cache {
          $conn = self::conn();
         
         if (!empty($key)) {
-            return $conn->get($key,false);
+            return $conn->get($key);
         }
 
         return false;
