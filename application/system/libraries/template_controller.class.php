@@ -60,7 +60,7 @@ class Template_Controller {
  
 
         // Cleanup all instaniated variables
-        unset ($page, $vars, $view, $this);
+        unset ($page, $vars, $view);
 
         $defined_vars = get_defined_vars();
         if (!empty($defined_vars)) {
