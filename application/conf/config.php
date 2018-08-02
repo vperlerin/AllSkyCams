@@ -1,14 +1,7 @@
 <?php
 
 
-// Mailer
-// SMTP
-define('SMTP_HOST','smtp.gmail.com');
-define('SMTP_USER','noreply@castlecomm.com');
-define('SMTP_PWD','1ancel011ancel01');
-define('SMTPSecure','tls');
-define('SMTP_TLS_PORT','587');
-
+ 
 // Pathing Variables
 define ('VIEWS', ROOT_DIR . '/application/views');
 
