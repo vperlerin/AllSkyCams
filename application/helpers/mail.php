@@ -33,9 +33,10 @@ Class Mail {
 			$mail = Mail::getMailer();
 			$mail->setFrom(SMTP_USER_EMAIL, SMTP_USER_Name);;
  			  
+			//$mail->addAddress('Mike Hankey', 'mike.hankey@gmail.com'); // Add a recipient
 			$mail->addAddress('Mike Hankey', 'mike.hankey@gmail.com'); // Add a recipient
 			$mail->addReplyTo($email,$email_name);
-			$mail->addBCC('vperlerin@gmail.com');
+			$mail->addBCC('vperlerin@gmail.com','Vincent Perlerin');
 			
 			$mail->isHTML(true);  // HTML
 			$mail->Subject  = $subject;
