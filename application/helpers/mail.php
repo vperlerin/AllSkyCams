@@ -34,15 +34,16 @@ Class Mail {
 			$mail->setFrom(SMTP_USER_EMAIL, SMTP_USER_Name);;
  			  
 			//$mail->addAddress('Mike Hankey', 'mike.hankey@gmail.com'); // Add a recipient
-			$mail->addAddress('Mike Hankey', 'mike.hankey@gmail.com'); // Add a recipient
+			//$mail->addAddress('Mike Hankey', 'mike.hankey@gmail.com'); // Add a recipient
+			$mail->addAddress('Vincent Perlerin', 'vperlerin@gmail.com'); // Add a recipient
 			$mail->addReplyTo($email,$email_name);
-			$mail->addBCC('vperlerin@gmail.com','Vincent Perlerin');
+			$mail->addBCC('vperlerin@gmail.com');
 			
 			$mail->isHTML(true);  // HTML
 			$mail->Subject  = $subject;
 			$mail->Body 	= $message;
 			$mail->AltBody 	= $message;
-			
+ 
 			return $mail->send();
 		 
 		 else:
