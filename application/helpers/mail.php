@@ -35,9 +35,10 @@ Class Mail {
  			  
 			//$mail->addAddress('Mike Hankey', 'mike.hankey@gmail.com'); // Add a recipient
 			//$mail->addAddress('Mike Hankey', 'mike.hankey@gmail.com'); // Add a recipient
-			$mail->addAddress('Vincent Perlerin', 'vperlerin@gmail.com'); // Add a recipient
-			$mail->addReplyTo($email,$email_name);
+			$mail->addAddress('Mike Hankey', 'mike.hankey@gmail.com'); // Add a recipient
 			$mail->addBCC('vperlerin@gmail.com');
+			$mail->addReplyTo($email,$email_name);
+			
 			
 			$mail->isHTML(true);  // HTML
 			$mail->Subject  = $subject;
