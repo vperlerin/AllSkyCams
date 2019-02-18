@@ -29,16 +29,12 @@ Class Mail {
 	public static function send_contact_email($email, $email_name='', $subject, $message) {
 		
  		if(!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)):
- 		
+
 			$mail = Mail::getMailer();
-			$mail->setFrom(SMTP_USER_EMAIL, SMTP_USER_Name);;
- 			  
-			//$mail->addAddress('Mike Hankey', 'mike.hankey@gmail.com'); // Add a recipient
-			//$mail->addAddress('Mike Hankey', 'mike.hankey@gmail.com'); // Add a recipient
-			$mail->addAddress('Mike Hankey', 'mike.hankey@gmail.com'); // Add a recipient
+			$mail->setFrom(SMTP_USER_EMAIL, SMTP_USER_Name);
+			$mail->addAddress('mike.hankey@gmail.com','Mike Hankey'); // Add a recipient
 			$mail->addBCC('vperlerin@gmail.com');
 			$mail->addReplyTo($email,$email_name);
-			
 			
 			$mail->isHTML(true);  // HTML
 			$mail->Subject  = $subject;
