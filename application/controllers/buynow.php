@@ -45,8 +45,8 @@ class buynow_controller extends Template_Controller {
 				$message 
          );
          
-         pp($this->input);
-         exit;
+         #pp($this->input);
+         #exit;
 			unset($message);
 		endif;
   
