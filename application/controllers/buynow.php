@@ -43,7 +43,10 @@ class buynow_controller extends Template_Controller {
 				$this->input['firstname'] . ' ' . $this->input['lastname'],
 				'AllSkyCams BUY',
 				$message 
-			);
+         );
+         
+         pp($this->input);
+         exit;
 			unset($message);
 		endif;
   
