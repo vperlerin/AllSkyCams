@@ -13,7 +13,7 @@ class about_controller extends Template_Controller {
 		$this->template->header = new View('/shared/header.html');
 		$this->template->header->activeMenu = "about"; 
       $this->template->header->title = "About AllSkyCams"; 
-      $this->template->header->description = "Who's behind AllSkyCams? Learn more about Mike Hankey."
+      $this->template->header->description = "Who's behind AllSkyCams? Learn more about Mike Hankey.";
   
 		$this->template->content = $content;
 		$this->template->footer = new View('/shared/footer.html');
