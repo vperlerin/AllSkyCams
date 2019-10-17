@@ -13,6 +13,7 @@ class support_controller extends Template_Controller {
 		$this->template->header = new View('/shared/header.html');
 		$this->template->header->activeMenu = "support"; 
 		$this->template->header->title = "AllSkyCams Support"; 
+      $this->template->header->description = "Need help with AllSkyCams Products? Need a quotation? Contact us now!"
 
 
 		if(!empty($this->input['submit'])):

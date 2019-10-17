@@ -12,7 +12,9 @@ class buynow_controller extends Template_Controller {
 		
 		$this->template->header = new View('/shared/header.html');
 		$this->template->header->activeMenu = "buynow"; 
-		$this->template->header->title = "Buy AllSkyCams Now"; 
+      $this->template->header->title = "Buy AllSkyCams Now"; 
+      $this->template->header->description = "Buy AllSkyCams products and get the latest technology for sky 24/7 survey."
+
 
 		if(!empty($this->input['submit'])):
 			$message = "Hi Mike,<br/><br/>";
