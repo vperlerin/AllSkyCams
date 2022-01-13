@@ -18,16 +18,26 @@ class buynow_controller extends Template_Controller {
 
 		if(!empty($this->input['submit'])):
 			$message = "Hi Mike,<br/><br/>";
-			$message .= $this->input['firstname'] . ' ' . $this->input['lastname'] . ' (' .  $this->input['email'] . ' ) is interested in buying AllSky7.';
-  
+			$message .= $this->input['firstname'] . ' ' . $this->input['lastname'] . ' (' .  $this->input['email'] . ' ) is interested in buying ';
+
+			switch ($this->input['kits']) {
+				case 'kit7-1':
+					$message .= "<strong>An AllSky7 bundle WITH computer ($1,599)</strong>";
+					break;
+				case 'kit7-2':
+					$message .= "<strong>An AllSky7 bundle WITHOUT computer ($1,299)</strong>";
+					break; 
+			}
+
 			if(!empty($this->input['message'])):
 				$message .= "<br/><br/>He added the following message to his order:<br/>" . str_replace("\n", '<br />', $this->input['message'] );
-			endif; 
+			endif;
+
 			
 			$this->input['res'] = Mail::send_contact_email(
 				$this->input['email'],
 				$this->input['firstname'] . ' ' . $this->input['lastname'],
-				'AllSky7 BUY',
+				'AllSkyCams BUY',
 				$message 
          );
          
