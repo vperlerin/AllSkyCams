@@ -98,8 +98,8 @@ if (array_key_exists('provider', $_POST)) {
 }
 
 //If you don't want to use the built-in form, set your client id and secret here
-$clientId = '52473509056-j42qgl75v36uupkilkivj5njscrs7pjs.apps.googleusercontent.com';
-$clientSecret = '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';
+//$clientId = '52473509056-j42qgl75v36uupkilkivj5njscrs7pjs.apps.googleusercontent.com';
+//$clientSecret = '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';
 
 //If this automatic URL doesn't work, set it yourself manually to the URL of this script
 $redirectUri = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
