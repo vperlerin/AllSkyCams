@@ -1,6 +1,6 @@
 # Large sourcs
 *.psd
-
+vendor/
 # Logs
 logs
 *.log

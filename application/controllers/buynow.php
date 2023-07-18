@@ -1,18 +1,22 @@
-<?php 
+<?php
+
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+error_reporting(-1);
+require ROOT_DIR . '/vendor/autoload.php';
 
 class buynow_controller extends Template_Controller {
 
-
     /*
-	 * All unknown pages will hit here 
+	 * All unknown pages will hit here
 	 */
 	public function index() {
 
  		$content = new View('/buynow/index.html');
-		
+
 		$this->template->header = new View('/shared/header.html');
-		$this->template->header->activeMenu = "buynow"; 
-      	$this->template->header->title = "Buy AllSkyCams Now"; 
+		$this->template->header->activeMenu = "buynow";
+      	$this->template->header->title = "Buy AllSkyCams Now";
       	$this->template->header->description = "Buy AllSkyCams products and get the latest technology for sky 24/7 survey.";
 
 
@@ -26,36 +30,35 @@ class buynow_controller extends Template_Controller {
 					break;
 				case 'kit7-2':
 					$message .= "<strong>An AllSky7 bundle WITHOUT computer ($1,299)</strong>";
-					break; 
+					break;
 			}
 
 			if(!empty($this->input['message'])):
 				$message .= "<br/><br/>He added the following message to his order:<br/>" . str_replace("\n", '<br />', $this->input['message'] );
 			endif;
 
-			
 			$this->input['res'] = Mail::send_contact_email(
 				$this->input['email'],
 				$this->input['firstname'] . ' ' . $this->input['lastname'],
 				'AllSkyCams BUY',
-				$message 
+				$message
          );
-         
-         #pp($this->input);
-         #exit;
+
+       #  print_r($this->input);
+       #  exit;
 			unset($message);
 		endif;
-  
+
 		$this->template->content = $content;
 		$this->template->content->input = $this->input;
 		$this->template->footer = new View('/shared/footer.html');
-		
-		
-	}
-	
 
- 
-    
-    
-	
+
+	}
+
+
+
+
+
+
 }
